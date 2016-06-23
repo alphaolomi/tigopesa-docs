@@ -1,6 +1,9 @@
 # Introduction  
 
-This is an attempt to re-create the official Safaricom's M-Pesa API which is currently written in PDF.
+This is an attempt to re-write the official tigoPesa's API in a developer friendly way.
+the current documentantion is written in pdf which makes it difficult to work on and hard to 
+browse through the documentation. This is an attampt to make it easier for developers to work on this new & exciting 
+API. [Read More About the tigoPesa API here](https://www.tigo.co.tz/tigo-pesa-for-developers)
 
 ## Getting Started  
 This documentation is created using mkdocs so to run it locally you need to have python, pip and ofcourse mkdocs installed 
