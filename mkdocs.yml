@@ -1,0 +1,8 @@
+site_name: M-Pesa Unofficial API  
+pages:
+- Home:    index.md
+- About:   about.md
+- Customer To Business:     b2b.md
+- Business To Customer:     b2b.md
+- Payments:     payments.md
+theme: readthedocs
