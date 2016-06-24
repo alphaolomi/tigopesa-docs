@@ -1,8 +1,7 @@
 site_name: tigPesa Official API Documentation
 pages:
-- Home:    index.md
-- About:   about.md
-- Customer To Business:     b2b.md
-- Business To Customer:     b2b.md
-- Online Payments API:     payments.md
+- Home:                      index.md
+- About:                     about.md
+- Online Payments Guide:     online_payments.md
+- Partner Integration Guide: partner_integration.md
 theme: readthedocs

@@ -1,4 +1,4 @@
-# Application integration guidelines 
+# Application integration guidelines for online payments 
 
 ## Connectivity and communication
 
