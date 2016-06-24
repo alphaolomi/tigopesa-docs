@@ -1,4 +1,4 @@
-site_name: tigPesa API 
+site_name: TigoPesa API Documentation
 pages:
 - Home:                      index.md
 - About:                     about.md
