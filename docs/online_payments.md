@@ -303,11 +303,9 @@ Response code: 200 OK
 Response body:
 ```json
 {
-"accessToken": " ABcdef123456ABcdef123456ABcd", 
-
-"issuedAt": "1410268728383",
-
-"expiresIn": "599",
+  "accessToken": " ABcdef123456ABcdef123456ABcd", 
+  "issuedAt": "1410268728383",
+  "expiresIn": "599",
 }
 ``` 
 
@@ -329,11 +327,8 @@ Response code: 401 Unauthorized
 Response body:
 ```json
 {
-
-"ErrorCode" : "invalid\_client",
-
-"Error" :"Client credentials are invalid"
-
+  "ErrorCode" : "invalid\_client",
+  "Error" :"Client credentials are invalid"
 }
 ``` 
 
@@ -371,10 +366,13 @@ The System Status Service is provided to monitor the health of the service perio
 {
   "tigoSecureStatusCode" : 0, 
   "statusDescription" : "OK", 
-  "TigoOperationStatus" :
-  {
-  {"country":"TZA", "code":0, "description":"OK"} 
-  {"country":"SEN", "code":0, "description":"OK"}
+  "TigoOperationStatus" :{
+    {"country":"TZA", "code":0, 
+      "description":"OK"
+    } 
+    {"country":"SEN", 
+      "code":0, "description":"OK"
+    }
   }
 }
 ``` 
@@ -403,14 +401,13 @@ JSON Request body:
  | id | 1 | String | Identifier of master merchant (i.e. company name) <br>as provided by Millicom |
  | Merchant | 0..1 | _[optional]_ |
  | reference | 1 | String | Reference of the originating merchant (company name) <br>in case the payment was made <br>on behalf of  another company |
- | fee | 0..1 | Decimal | Merchant fee for the transaction in the origin currency. <br>This fee is charged from the
- <br>merchant Information about this fee will not be <br> communicated to the subscriber. This information is confidential and is to be used for reconciliation |
+ | fee | 0..1 | Decimal |Merchant fee for the transaction in the origin currency.This fee is charged from the merchant Information about this fee will not be communicated to the subscriber. This information is confidential and is to be used for reconciliation |
  | currencyCode | 0..1 | String | Currency code of the Merchant fee  |
  | Subscriber | 1 |
  | account | 1 |  String | MFS Account number (msisdn) of the paying <br>subscriber (account to debit) |
  | countryCode | 1  | String  | Country code dialing prefix (annex A.4) |
  | country | 1 | String  | Three letter country code <br>(ISO 3166-1 Annex A.2) |
- | firstName | 0..1  String | First name of the subscriber |
+ | firstName | 0..1 | String | First name of the subscriber |
  | lastName | 0..1 | String  | Last name of the subscriber |
  | emailId | 0..1  | String  | _[optional]_ Email address |
  | redirectUri | 1 | String  | Redirection URI to redirect after completing the payment| 
@@ -421,55 +418,53 @@ JSON Request body:
  | amount |  1  | Decimal  | Total amount in the currency of the original  merchant payment |
  | currencyCode | 1  | String  | Currency code of the payment (see Annex A.1) |
  | tax | 1  | Decimal  | Tax for the transaction in the origin currency |
- | fee | 1  | Decimal  | Fee applied by the Master Merchant for the <br>transaction in the origin currency. This fee is
- <br>charged from the subscriber and will be shown to <br>the subscriber. If no fee has been applied the field <br>can be set to 0 |
- | exchangeRate | 0..1  | Decimal  | _[optional]_ Exchange rate between the origin <br> currency (currency of the sending country) and <br>local currency (currency of the receiving country) |
+ | fee | 1  | Decimal  | Fee applied by the Master Merchant for the transaction in the origin currency. This fee is charged from the subscriber and will be shown to the subscriber. If no fee has been applied the field can be set to 0 |
+ | exchangeRate | 0..1  | Decimal  | _[optional]_ Exchange rate between the origin currency (currency of the sending country) and local currency (currency of the receiving country) |
  | LocalPayment | 1 |
  | amount  | 1  | Decimal  | Total amount in the local currency of the paying subscriber |
- | currencyCode | 1  | String  | Currency code of the MFS account of the paying <br>subscriber (local currency)(see Annex A.1) |
+ | currencyCode | 1  | String  | Currency code of the MFS account of the paying subscriber (local currency) |
  | transactionRefId | 1  | String  | Reference Identifier in order to uniquely identify the transaction. |
 
 ** Sample Request:** 
 ```json 
 {
-"MasterMerchant":
-  {
-  "account":"255321321321",
-  "pin":"1234",
-  "id":"CompanyName"
+  "MasterMerchant":{
+    "account":"255321321321",
+    "pin":"1234",
+    "id":"CompanyName"
   },
-"Merchant":
-  {
-  "reference":"Amazon",
-  "fee":"23.45",
-  "currencyCode":"EUR"
+  "Merchant":{
+    "reference":"Amazon",
+    "fee":"23.45",
+    "currencyCode":"EUR"
   },
-"Subscriber":
-  {
-  "account":"255111111111", "countryCode": "255", "country":"tza", "firstName":"John", "lastName":"Doe",
-  "emailId" : "johndoe@mail.com"
+  "Subscriber":{
+    "account":"255111111111", 
+    "countryCode": "255",
+    "country":"tza",
+    "firstName":"John",
+    "lastName":"Doe",
+    "emailId" : "johndoe@mail.com"
   },
-"redirectUri":"https://someapp.com/payment/redirecturi",
-"callbackUri":"https://someapp.com/payment/statuscallback",
-"language":"eng",
-"terminalId":"",
-"originPayment":
-  {
-  "amount":"75.00",
-  "currencyCode":"USD",
-  "tax":"0.00",
-  "fee":"25.00"
-  }
-"exchangeRate":"2182.23",
-"LocalPayment":
-  {
-  "amount":"218223.00",
-  "currencyCode":"TZS"
-  },
-"transactionRefId":"0a1e39ab"
+  "redirectUri":"https://someapp.com/payment/redirecturi",
+  "callbackUri":"https://someapp.com/payment/statuscallback",
+  "language":"eng",
+  "terminalId":"",
+  "originPayment":{
+    "amount":"75.00",
+    "currencyCode":"USD",
+    "tax":"0.00",
+    "fee":"25.00"
+    }
+  "exchangeRate":"2182.23",
+  "LocalPayment":{
+    "amount":"218223.00",
+    "currencyCode":"TZS"
+    },
+  "transactionRefId":"0a1e39ab"
 }
 ``` 
-Make sure to **use the Access Token only**** once ****to initiate a Payment**
+Make sure to **use the Access Token only**** once **to initiate a Payment**
 **Authorization**. For each Payment Authorization request a new accesstoken has to be generated. This is because the access token is invalidated after the transaction completed. Any other additional transaction initiated with the same access token will therefore fail.
 
 Per Payment Authorization make sure to **use a unique transaction**** reference identifier** (transactionRefId) to identify the transaction. This will guarantee that the transaction is logged and traced correctly.
@@ -605,14 +600,13 @@ JSON Request body:
 ** Example request:**
 ```json
 {
-"transactionRefId" : "1300074238", 
-"ReceivingSubscriber" :
-  {
-  "account" : "255658123964", 
-  "countryCallingCode" : "255", 
-  "countryCode" : "TZA", 
-  "firstName" : "John", 
-  "lastName" : "Doe"
+  "transactionRefId" : "1300074238", 
+  "ReceivingSubscriber" :{
+    "account" : "255658123964", 
+    "countryCallingCode" : "255", 
+    "countryCode" : "TZA", 
+    "firstName" : "John", 
+    "lastName" : "Doe"
   }
 }
 ``` 
@@ -873,10 +867,9 @@ Example request:
   "mfsTransactionId" : "CO140924.1414.A00113", 
   "countryCode" : "tza",
   "subscriberAccount" : "255111111111",
-  "LocalPayment" :
-  {
-  "amount" : " 218223.00", 
-  "currencyCode" :"TZS"
+  "LocalPayment" :{
+    "amount" : " 218223.00", 
+    "currencyCode" :"TZS"
   }
 }
 ```
@@ -894,9 +887,7 @@ Example request:
 with <MasterMerchantID><transactionRefId> the MasterMerchant Identifier and transaction reference ID as specified in the Payment Authorization Request. For example when the below values were provided in the original Payment Authorization Request (Section 4.5.1):
 ```json
 "MasterMerchant":{
-…
 "id":" **Company Name**"
-…
 "transactionRefId":" **0a1e39ab**"
 ``` 
 
@@ -998,8 +989,7 @@ JSON response body:
     "fee":"25.00"
   },
   "exchangeRate":"2182.23",
-  "LocalPayment":
-  {
+  "LocalPayment":{
     "amount":"218223.00",
     "currencyCode":"TZS"
   }
@@ -1021,9 +1011,9 @@ with <PaymentAggregatorID><TransactionID> the Payment Aggregator Identifier and 
 { 
 "transactionRefId" : "**1300074**",
 "PaymentAggregator" : {
-…
-…
-"id" : " **Company Name**"
+  "id" : " **Company Name**"
+  }
+}
 ```
 
 Example request:
