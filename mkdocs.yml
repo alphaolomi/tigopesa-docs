@@ -4,5 +4,5 @@ pages:
 - About:   about.md
 - Customer To Business:     b2b.md
 - Business To Customer:     b2b.md
-- Payments:     payments.md
+- Online Payments API:     payments.md
 theme: readthedocs
