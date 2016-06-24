@@ -887,8 +887,9 @@ Example request:
 with <MasterMerchantID><transactionRefId> the MasterMerchant Identifier and transaction reference ID as specified in the Payment Authorization Request. For example when the below values were provided in the original Payment Authorization Request (Section 4.5.1):
 ```json
 "MasterMerchant":{
-"id":" **Company Name**"
-"transactionRefId":" **0a1e39ab**"
+  "id":" **Company Name**",
+  "transactionRefId":" **0a1e39ab**"
+}
 ``` 
 
 The example request to retrieve the payment authorization transaction status will be in that case:
@@ -1280,8 +1281,8 @@ The error below is returned in case Transaction Reference ID has already been us
 
 ```json
 {
-"ErrorCode": "invalid\_request",
-"Error": "transactionRefId already exists"
+  "ErrorCode": "invalid\_request",
+  "Error": "transactionRefId already exists"
 }
 ``` 
 
