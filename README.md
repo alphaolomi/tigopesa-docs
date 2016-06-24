@@ -5,6 +5,7 @@ the current documentantion is written in pdf which makes it difficult to work on
 browse through the documentation. This is an attampt to make it easier for developers to work on this new & exciting 
 API. [Read More About the tigoPesa API here](https://www.tigo.co.tz/tigo-pesa-for-developers)
 
+A lot of effort was spent to make this as accurate as possible, However, If there is any error/confusion please refer to the original documents found [here](https://www.tigo.co.tz/tigo-pesa-for-developers)
 ## Getting Started  
 This documentation is created using mkdocs therefore in order run it locally you need to have python, pip and ofcourse mkdocs installed 
 
