@@ -121,7 +121,7 @@ The initial language of the Tigo Secure webpages shown is set via the language p
 
 ## Payment Authorization via SMS verification code 
 
-In the following countries the payment is authorization by sending a verification code via text message to the subscriber:
+In the following countries the payment is authorized by sending a verification code via text message to the subscriber:
 
 - Senegal
 
@@ -190,7 +190,7 @@ After that the subscriber account will get blocked.
 
 ## Payment Authorization via USSD Push 
 
-In the following countries the payment is authorization via a USSD menu
+In the following countries the payment is authorized via a USSD menu
 
 - Bolivia
 - El Salvador
