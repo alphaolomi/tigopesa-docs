@@ -1,7 +1,9 @@
 site_name: TigoPesa API Documentation
-pages:
-- Home:                      index.md
-- About:                     about.md
-- Online Payments Guide:     online_payments.md
-- Partner Integration Guide: partner_integration.md
-theme: readthedocs
+
+nav:
+  - Home: index.md
+  - About: about.md
+  - Online Payments Guide: online_payments.md
+  - Partner Integration Guide: partner_integration.md
+
+theme: lumen
