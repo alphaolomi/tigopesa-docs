@@ -1,4 +1,4 @@
-# Introduction
+<!-- # Introduction
 
 This is an attempt to re-write the official tigoPesa's API in a developer friendly way.
 the current documentantion is written in pdf which makes it difficult to work on and hard to
@@ -19,4 +19,10 @@ Start the live-reloading docs server.
 
 Now you can view the documentation by just going to
 
-`http://localhost:8000`
+`http://localhost:8000` -->
+
+
+<!-- <p align="center"><img src="./assets/tigopesa.png" alt="tigpesa logo"></p> -->
+<h1 align="center">Tigopesa Docs for Developers</h1>
+
+<h2 align="center">Revamped</h2>
