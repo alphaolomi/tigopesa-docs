@@ -6,8 +6,8 @@ site_description: >-
   Tigopesa Documentation for Developers
 
 # Repository
-repo_name: alphaolomi/nhif-docs/
-repo_url: https://github.com/alphaolomi/nhif-docs/
+repo_name: alphaolomi/tigo-pesa
+repo_url: https://github.com/alphaolomi/tigo-pesa
 edit_uri: edit/main/docs/
 
 # Copyright
