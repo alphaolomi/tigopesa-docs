@@ -1,13 +1,13 @@
 # Site Info
 site_name: TigoPesa Docs
-site_url: https://nhif-docs.netlify.app/
+site_url: https://tigopesa-docs.netlify.app/
 site_author: Alpha Olomi
 site_description: >-
   Tigopesa Documentation for Developers
 
 # Repository
-repo_name: alphaolomi/tigo-pesa
-repo_url: https://github.com/alphaolomi/tigo-pesa
+repo_name: alphaolomi/tigopesa-docs
+repo_url: https://github.com/alphaolomi/tigopesa-docs
 edit_uri: edit/main/docs/
 
 # Copyright
