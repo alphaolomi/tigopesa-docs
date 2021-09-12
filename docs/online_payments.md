@@ -316,7 +316,7 @@ HTTP response code: 401 Unauthorized
 JSON response body:
 
 | **Parameter** | **Type** | **Description** |
-| --- | --- | --- | --- |
+| --- | --- | --- | 
 | ErrorCode | String | Error code |
 | Error | String | Error description |
 
@@ -332,20 +332,21 @@ Response body:
 }
 ``` 
 
-System Status Service 
+### System Status Service 
 
 The System Status Service is provided to monitor the health of the service periodically (heartbeat signal). The service returns the status of both the network connectivity and the application status to the Tigo Secure server and from the Tigo Secure Server to the Tigo Operations.
 
 ## Request 
 
-|**System Status Request**|
+|**System |Status| Request**|
 | --- | --- | --- |
 | **URL** | _<domain>_/v1/tigo/systemstatus |
 | **Method** | GET |
 | **Header** | accessToken | `<valid access token>`|
 
 
- | **4.4.2. Response** |
+  **4.4.2. Response** 
+
  | --- | --- |
  | Average response time: | < 1 second |
  | Maximum response time: | 5 seconds |
@@ -384,9 +385,9 @@ The System Status Service is provided to monitor the health of the service perio
 For the Tigo Secure Online Payment Authorization a redirect to the following URL has to be done including a JSON request with the required payment details:
 
 Payment Authorization Request
-
-| **URL** | _<domain>_/v1/tigo/payment-auth/autorize |
+|||
 |---------|------------------------------------------|--------|
+| **URL** | _<domain>_/v1/tigo/payment-auth/autorize |
 | **Method** | POST |
 | **Header** | Content-Type| application/json |
 || accessToken | `<valid access token>` |
@@ -472,9 +473,7 @@ Per Payment Authorization make sure to **use a unique transaction**** reference 
 ## Response 
 
 Average response time:< 1 second
-
 Maximum response time: 5 seconds
-
 HTTP response code: 200 OK
 
 JSON Response body:
@@ -486,7 +485,7 @@ JSON Response body:
 | authCode | 1 | String | Unique code to authenticate the transaction for the customer when redirecting |
 | creationDateTime | 1 | String | Transaction Creation Date and Time |
 
-# Payment Authorization Response parameters
+## Payment Authorization Response parameters
 
 ** Example response:**
 ```json

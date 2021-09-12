@@ -1,9 +1,76 @@
-site_name: TigoPesa API Documentation
+# Site Info
+site_name: TigoPesa Docs
+site_url: https://nhif-docs.netlify.app/
+site_author: Alpha Olomi
+site_description: >-
+  Tigopesa Documentation for Developers
 
+# Repository
+repo_name: alphaolomi/nhif-docs/
+repo_url: https://github.com/alphaolomi/nhif-docs/
+edit_uri: edit/main/docs/
+
+# Copyright
+copyright: Copyright &copy; 2021 Alpha Olomi
+
+# Navigation
 nav:
   - Home: index.md
+  - Guide:
+      - Introduction: introduction.md
+      - Version History: version.md
+      - Online Payments Guide: online_payments.md
+      - Partner Integration Guide: partner_integration.md
+  - "Integrations":
+      - PHP: php.md
+      - Node.js: node.md
+      - Python: python.md
   - About: about.md
-  - Online Payments Guide: online_payments.md
-  - Partner Integration Guide: partner_integration.md
 
-theme: lumen
+plugins:
+  - search
+  # - git-revision-date
+  # - git-revision-date-localized:
+  # fallback_to_build_date: true
+
+theme:
+  name: material
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+extra:
+  analytics:
+    provider: google
+    property: G-5NM1TL3BRZ
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/alphaolomi
+
+markdown_extensions:
+  - footnotes
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.snippets
+  - pymdownx.keys
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - admonition
+  - abbr
+  - attr_list
+  - def_list
+  - footnotes
+  - meta
