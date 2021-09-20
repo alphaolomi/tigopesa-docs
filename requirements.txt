@@ -31,6 +31,6 @@ regex==2021.8.28
 six==1.16.0
 smmap==4.0.0
 tornado==6.1
-tqdm==4.62.2
+tqdm==4.62.3
 watchdog==2.1.5
 zipp==3.5.0
