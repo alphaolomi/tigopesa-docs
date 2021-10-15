@@ -29,7 +29,7 @@ PyYAML==5.4.1
 pyyaml_env_tag==0.1
 regex==2021.8.28
 six==1.16.0
-smmap==4.0.0
+smmap==5.0.0
 tornado==6.1
 tqdm==4.62.2
 watchdog==2.1.5
