@@ -1,5 +1,13 @@
 {
+  "separateMajorMinor": true,
   "extends": [
-    "config:base"
-  ]
+    ":preserveSemverRanges",
+    "group:all",
+    ":maintainLockFilesMonthly"
+  ],
+  "lockFileMaintenance": {
+    "extends": [
+      "group:all"
+    ]
+  }
 }
