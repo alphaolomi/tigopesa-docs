@@ -33,4 +33,4 @@ smmap==4.0.0
 tornado==6.1
 tqdm==4.62.2
 watchdog==2.1.5
-zipp==3.5.0
+zipp==3.7.0
