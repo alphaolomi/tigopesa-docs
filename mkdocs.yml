@@ -20,6 +20,7 @@ nav:
       - Introduction: introduction.md
       - Version History: version.md
       - Online Payments Guide: online_payments.md
+      - API Guide: api_spec.md
       - Partner Integration Guide: partner_integration.md
   - "Integrations":
       - PHP: php.md
